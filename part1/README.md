@@ -1,5 +1,5 @@
 # Basic Flask application
-Part #1 of series 'Full-stack development on Flask & Vue.js'
+Part #1 of series 'Full-stack development on Flask & Vue.js & MongoDB'
 
 Shows the process of setting up the basic Flask application
 

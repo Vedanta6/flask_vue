@@ -1,6 +1,6 @@
-# Series 'Full-stack development on Flask & Vue.js'
+# Series 'Full-stack development on Flask & Vue.js & MongoDB'
 
-Shows the process of a full-stack web application development using Flask back-end and Vue.js front-end
+Shows the process of a full-stack web application development using Flask back-end, Vue.js front-end and MongoDB
 
 Related to following articles on Medium:
 
