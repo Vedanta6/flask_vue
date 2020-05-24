@@ -1,0 +1,33 @@
+.custom-footer {
+    position: fixed;
+    justify-content: center;
+    align-self: center;
+    bottom: 0;
+    flex-direction: column;
+}
+
+#app-container {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    bottom: 50px;
+    width: 100%;
+    padding: 2rem;
+    overflow: auto;
+}
+
+.custom-home {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #117a8b;
+}
+
+a:hover {
+    color: #1d6773;
+}
