@@ -6,6 +6,7 @@ Shows the process of setting up the basic Flask application
 Related to an [article] on Medium
 
 To set up the app install requirements.txt, then run
+
 `flask run`
 
 

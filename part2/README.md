@@ -1,12 +1,13 @@
-# Basic Flask application
-Part #1 of series 'Full-stack development on Flask & Vue.js'
+# Basic Vue.js application
+Part #2 of series 'Full-stack development on Flask & Vue.js & MongoDB'
 
-Shows the process of setting up the basic Flask application
+Shows the process of setting up the basic Vue.js application with demo
 
-Related to an [article] on Medium
+Related to an [article] on Medium (use for installation guidance)
 
-To set up the app install requirements.txt, then run
-`flask run`
+To run the app:
+
+`npm run serve`
 
 
-[article]: https://medium.com/@vedanta6/full-stack-development-on-flask-vue-js-1-basic-flask-application-519143c9a3bf
+[article]: https://medium.com/@vedanta6/full-stack-development-on-flask-vue-js-mongodb-2-basic-vue-js-application-174ccd29522b
