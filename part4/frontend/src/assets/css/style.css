@@ -1,0 +1,105 @@
+.custom-footer {
+    position: fixed;
+    justify-content: center;
+    align-self: center;
+    bottom: 0;
+    flex-direction: column;
+}
+
+#app-container {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    bottom: 50px;
+    width: 100%;
+    padding: 2rem;
+    overflow: auto;
+}
+
+.custom-home {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #00897B;
+}
+
+.colorify {
+    color: #00897B;
+}
+
+a:hover {
+    color: #00796B;
+}
+
+.on-fly-input,.on-fly-input:hover,.on-fly-input:focus {
+    border: transparent;
+    background-color: transparent;
+    outline: transparent;
+}
+
+table {
+    text-align: left;
+}
+
+.v-icon.v-icon.v-icon--link, .v-icon:hover, .v-icon:focus {
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+}
+
+.v-icon-highlighted {
+    color: #00897B !important;
+}
+
+.theme--light.v-data-table tbody tr.v-data-table__selected {
+    color: #9e9e9e !important;
+    background-color: #e9eeef38 !important;
+}
+
+.theme--light.v-data-table tbody tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+    background: #e9eeef38 !important;
+    background-color: #e9eeef38 !important;
+}
+
+.theme--light.v-data-table tbody tr.no-highlight:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.custom-btn {
+    color: #fff;
+    background-color: #00796B;
+    border-color: #00796B;
+}
+
+.custom-btn:hover {
+    color: #fff;
+    background-color: #00897B;
+    border-color: #00897B;
+}
+
+.custom-btn:not(:disabled):not(.disabled):active, .custom-btn:not(:disabled):not(.disabled).active, .show > .custom-btn.dropdown-toggle {
+    color: #fff;
+    background-color: #00897B;
+    border-color: #00897B;
+}
+
+.custom-btn:focus {
+    color: #fff;
+    background-color: #00897B;
+    border-color: #00897B;
+    box-shadow: 0 0 0 0.1rem #019e8e;
+}
+
+.v-data-table th {
+    font-size: medium !important;
+}
+
+.v-data-table input {
+    font-size: medium !important;
+}
