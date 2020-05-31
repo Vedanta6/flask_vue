@@ -8,22 +8,26 @@ def index():
     shopping_list = [
         {
             'name': 'olive oil',
-            'quantity': '1 bottle',
+            'quantity': 1,
+            'unit': 'bottle(s)',
             'missing': True,
         },
         {
             'name': 'mozzarella cheese',
-            'quantity': '250 g',
+            'quantity': 250,
+            'unit': 'g',
             'missing': True,
         },
         {
             'name': 'tomatoes',
-            'quantity': '200 g',
+            'quantity': 200,
+            'unit': 'g',
             'missing': True,
         },
         {
             'name': 'basil',
-            'quantity': '75 g',
+            'quantity': 75,
+            'unit': 'g',
             'missing': True,
         }
     ]
