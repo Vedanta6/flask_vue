@@ -82,7 +82,7 @@
 </template>
 
 <script>
-  export default ({
+  export default {
     name: 'shoppingList',
     data() {
       return {
@@ -194,5 +194,5 @@
       }
 
     }
-  })
+  };
 </script>

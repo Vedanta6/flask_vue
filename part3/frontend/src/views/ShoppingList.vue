@@ -5,6 +5,9 @@
         <v-icon v-blur @click="fetchDefaults" :class="icons[4].class">
           {{ icons[4].icon }}
         </v-icon>
+        <v-icon v-blur @click="updateList" :class="icons[5].class">
+          {{ icons[5].icon }}
+        </v-icon>
       </h3>
       <v-layout justify-center justify-content-center mt-4>
         <v-simple-table fixed-header>
@@ -82,7 +85,9 @@
 </template>
 
 <script>
-  export default ({
+  import axios from 'axios';
+
+  export default {
     name: 'shoppingList',
     data() {
       return {
@@ -112,52 +117,55 @@
             'icon': 'mdi-refresh',
             'class': 'v-icon-highlighted pl-1 pb-1',
             'style': ''
+          },
+          {
+            'icon': 'mdi-content-save',
+            'class': 'v-icon-highlighted pl-1 pb-1',
+            'style': ''
           }
         ],
         icons_list: []
       }
     },
+
     created: function () {
-        this.fetchDefaults();
+      this.fetchDefaults();
     },
+
+    beforeRouteLeave: function (to, from, next) {
+      this.updateList();
+      next();
+    },
+
     methods: {
       fetchDefaults: function () {
+        const path = 'http://localhost:5000/shoppinglist';
+        axios.get(path)
+          .then((res) => {
+            this.shopping_list = res.data.shopping_list;
+            this.icons_list = [];
+            for (var i = 0; i < this.shopping_list.length; i++) {
+              if (this.shopping_list[i].missing == true) {
+                this.icons_list.push(this.icons[0]);
+              } else {
+                this.icons_list.push(this.icons[1]);
+              }
+            }
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      },
 
-        this.shopping_list = [
-          {
-            'name': 'olive oil',
-            'quantity': 1,
-            'unit': 'bottle(s)',
-            'missing': true,
-          },
-          {
-            'name': 'mozzarella cheese',
-            'quantity': 250,
-            'unit': 'g',
-            'missing': true,
-          },
-          {
-            'name': 'tomatoes',
-            'quantity': 200,
-            'unit': 'g',
-            'missing': true,
-          },
-          {
-            'name': 'basil',
-            'quantity': 75,
-            'unit': 'g',
-            'missing': true,
-          }
-        ];
-
-        this.icons_list = [];
-        for (var i = 0; i < this.shopping_list.length; i++) {
-          if (this.shopping_list[i].missing == true) {
-            this.icons_list.push(this.icons[0]);
-          } else {
-            this.icons_list.push(this.icons[1]);
-          }
-        }
+      updateList: function () {
+        const path = 'http://localhost:5000/shoppinglist';
+        axios.post(path, this.shopping_list)
+          .then(() => {
+            this.fetchDefaults();
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       },
 
       removeRow: function (index) {
@@ -194,5 +202,5 @@
       }
 
     }
-  })
+  };
 </script>
