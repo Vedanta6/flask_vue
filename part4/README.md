@@ -1,13 +1,13 @@
 # Connecting Flask & Vue.js
-Part #3 of series 'Full-stack development on Flask & Vue.js & MongoDB'
+Part #4 of series 'Full-stack development on Flask & Vue.js & MongoDB'
 
-Shows the process of connecting Flask back-end with Vue.js front-end
+Shows the process of installing, creating and setting app MongoDB for Flask & Vue.js application
 
 Related to an [article] on Medium (use for installation guidance)
 
 To run the app:
 
-`npm run serve`
+`flask run`
 
 
-[article]: https://medium.com/@vedanta6/full-stack-development-on-flask-vue-js-mongodb-3-connecting-flask-vue-js-7c33b9d0a9bc
+[article]: https://medium.com/@vedanta6/full-stack-development-on-flask-vue-js-mongodb-4-empowering-app-with-mongodb-89ce08c26bbf
