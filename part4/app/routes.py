@@ -1,11 +1,19 @@
-from flask import jsonify, request
+from flask import jsonify, request, redirect, url_for
 from app import app
-from .manager import get_shopping_list, recreate_shopping_list
+from .documents import ShoppingList
+from .manager import get_shopping_list, recreate_shopping_list, create_default_shopping_list
+
+
+@app.route('/recreatedb', methods=['GET', 'POST'])
+def recreatedb():
+    if ShoppingList.objects.count() < 1:
+        create_default_shopping_list()
+    return redirect(url_for('shoppinglist'))
 
 
 @app.route('/')
 @app.route('/shoppinglist', methods=['GET', 'POST'])
-def index():
+def shoppinglist():
 
     response_dict = {
         'status': 'success',

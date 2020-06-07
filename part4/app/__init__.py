@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from flask_mongoalchemy import MongoAlchemy
+from flask_mongoengine import MongoEngine
 
 from config import Config
 
@@ -12,7 +12,7 @@ app.config.from_object(Config)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 # set up MongoDB
-db = MongoAlchemy()
+db = MongoEngine()
 db.init_app(app)
 
 

@@ -69,12 +69,12 @@ def create_default_shopping_list():
 
 
 def get_shopping_list():
-    sl = ShoppingList.query.all()
+    sl = ShoppingList.objects.all()
     return [si.__dict__() for si in sl]
 
 
 def delete_shopping_list():
-    [si.remove() for si in ShoppingList.query.all()]
+    [si.delete() for si in ShoppingList.objects.all()]
 
 
 def recreate_shopping_list(shopping_list=None):
